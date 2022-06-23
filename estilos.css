@@ -47,6 +47,7 @@ button {
 
 h1, h2, h3, h4, h5, h6 {
   display: block;
+  text-align: center;
 }
 
 header, section, div, footer, nav {
@@ -101,6 +102,7 @@ header {
   transition: 0.5s all;
   -webkit-animation: slider 15s infinite linear;
           animation: slider 15s infinite linear;
+  overflow: hidden;
 }
 header div {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) -15%, #1f1a01);
@@ -144,17 +146,88 @@ header div section h2 {
 }
 header div section button {
   display: block;
-  width: 300px;
+  width: 150px;
   margin: 25px auto 0;
   border: 2px solid #d1b500;
   padding: 8px 0;
-  border-radius: 15px;
+  border-radius: 5px;
   font-family: "Potta One", cursive;
   font-size: 1.8rem;
 }
 header div section.mostArriba {
   -webkit-animation: mostrarArriba 1s;
           animation: mostrarArriba 1s;
+}
+
+.biografia {
+  padding-top: 60px;
+}
+.biografia h1 {
+  font-family: "Potta One", cursive;
+  font-size: 3rem;
+}
+.biografia section {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 500px;
+  height: 600px;
+  position: relative;
+}
+.biografia section picture {
+  position: relative;
+}
+.biografia section picture::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -15px;
+  left: -25px;
+  width: 85%;
+  height: 100%;
+  box-shadow: 0 0 0 8px #d1b500;
+  z-index: 3s;
+}
+.biografia section picture img {
+  width: 85%;
+}
+.biografia section div {
+  position: absolute;
+  top: calc(70% - 100px);
+  right: 0;
+  background: rgba(255, 255, 255, 0.777);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  width: 90%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 0 0 7px #d1b500;
+}
+.biografia section div h2 {
+  font-size: 3rem;
+  font-family: "Rubik Moonrocks", cursive;
+}
+.biografia section div h3 {
+  margin-top: 5px;
+  font-size: 2.3rem;
+  font-family: "Roboto", sans-serif;
+}
+.biografia section div a {
+  font-size: 2.2rem;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+}
+.biografia section div a svg {
+  width: 0;
+  transition: 0.3s;
+}
+.biografia section div a:hover svg {
+  width: 20px;
 }
 
 @-webkit-keyframes mostrarArriba {
