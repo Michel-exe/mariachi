@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/*
+font-family: 'Kdam Thmor Pro', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Potta One', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik Moonrocks', cursive;
+font-family: 'Staatliches', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Righteous', cursive;
+*/
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+p {
+  font-size: 2rem;
+}
+
+body {
+  padding-bottom: 200vh;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+}
+
+header, section, div, footer, nav {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.navBar {
+  height: 80px;
+  background: black;
+}
+.navBar > div {
+  display: flex;
+  width: 90%;
+}
+.navBar > div picture {
+  width: auto;
+  height: 130px;
+  margin: 0 auto;
+}
+.navBar > div picture img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.navBar > div .menu {
+  display: none;
+}
+.navBar > div nav {
+  width: 100%;
+  max-width: 900px;
+  margin-right: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navBar > div nav a {
+  font-size: 1.75rem;
+  color: #d1b500;
+  font-family: "Open Sans", sans-serif;
+}
+.navBar > div nav a span {
+  padding-right: 2px;
+  font-size: 1.1em;
+}
+
+header {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 110vh;
+  transition: 0.5s all;
+  -webkit-animation: slider 15s infinite linear;
+          animation: slider 15s infinite linear;
+}
+header div {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) -15%, #1f1a01);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+header div section {
+  width: 95%;
+  max-width: 1200px;
+  height: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  opacity: 0;
+  transition: 1s;
+}
+header div section h1, header div section h2, header div section button {
+  color: white;
+}
+header div section h1 {
+  text-transform: capitalize;
+  font-family: "Potta One", cursive;
+  letter-spacing: 1.5px;
+  font-size: 4rem;
+}
+header div section h1::after {
+  content: "";
+  display: block;
+  width: 70%;
+  max-width: 20ch;
+  height: 3px;
+  margin: 0 auto;
+  background: #d1b500;
+  margin-top: 7px;
+}
+header div section h2 {
+  margin-top: 17px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 2.5rem;
+}
+header div section button {
+  display: block;
+  width: 300px;
+  margin: 25px auto 0;
+  border: 2px solid #d1b500;
+  padding: 8px 0;
+  border-radius: 15px;
+  font-family: "Potta One", cursive;
+  font-size: 1.8rem;
+}
+header div section.mostArriba {
+  -webkit-animation: mostrarArriba 1s;
+          animation: mostrarArriba 1s;
+}
+
+@-webkit-keyframes mostrarArriba {
+  from {
+    transform: translateY(120px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mostrarArriba {
+  from {
+    transform: translateY(120px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes slider {
+  0% {
+    background-image: url("sources/stock/mariachi (3).jpg");
+  }
+  30% {
+    background-image: url("sources/stock/mariachi (3).jpg");
+  }
+  34% {
+    background-image: url("sources/stock/mariachi (6).jpg");
+  }
+  63% {
+    background-image: url("sources/stock/mariachi (6).jpg");
+  }
+  67% {
+    background-image: url("sources/stock/mariachi (2).jpg");
+  }
+  100% {
+    background-image: url("sources/stock/mariachi (2).jpg");
+  }
+}
+@keyframes slider {
+  0% {
+    background-image: url("sources/stock/mariachi (3).jpg");
+  }
+  30% {
+    background-image: url("sources/stock/mariachi (3).jpg");
+  }
+  34% {
+    background-image: url("sources/stock/mariachi (6).jpg");
+  }
+  63% {
+    background-image: url("sources/stock/mariachi (6).jpg");
+  }
+  67% {
+    background-image: url("sources/stock/mariachi (2).jpg");
+  }
+  100% {
+    background-image: url("sources/stock/mariachi (2).jpg");
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 8px;
+  }
+
+  .navBar {
+    overflow: hidden;
+    transition: 0.45s all;
+    background-image: url("sources/stock/mariachi (4).jpg");
+  }
+  .navBar > div {
+    background: rgb(0, 0, 0);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+  }
+  .navBar > div .menu {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    display: flex;
+    cursor: pointer;
+  }
+  .navBar > div .menu span, .navBar > div .menu span::after, .navBar > div .menu span::before {
+    content: "";
+    display: block;
+    width: 35px;
+    margin: auto;
+    height: 3px;
+    background: #fff;
+    transition: 0.4s all;
+  }
+  .navBar > div .menu span::before {
+    transform: translateY(-10px);
+  }
+  .navBar > div .menu span::after {
+    transform: translateY(7px);
+  }
+  .navBar > div nav {
+    top: 80px;
+    height: calc(100vh - 80px);
+    padding-top: 30px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .navBar > div nav a {
+    display: block;
+    width: 100%;
+    margin: 10px 0 10px 15px;
+    padding: 3px 0 3px 8px;
+    font-size: 2.1rem;
+    color: white;
+    border-bottom: 2px solid white;
+  }
+  .navBar.activ {
+    height: 100vh;
+    background-position: left;
+    background-size: cover;
+  }
+  .navBar.activ > div {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .navBar.activ > div .menu span {
+    transform: rotate(-0.125turn);
+  }
+  .navBar.activ > div .menu span::before {
+    transform: translateY(0) rotate(-0.25turn);
+  }
+  .navBar.activ > div .menu span::after {
+    transform: translateY(-3px) rotate(-0.25turn);
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 6px;
+  }
+
+  .navBar div nav a {
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=estilos.css.map */
